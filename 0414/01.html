@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상태선택자</title>
+    <!-- 상태 선택자 -->
+    <style>
+        input:enabled {
+             background-color: white; 
+        }
+        input:disabled { 
+            background-color: gray; 
+        }
+        input:focus {
+             background-color: rgb(65, 146, 238); 
+        }
+    </style>
+</head>
+<body>
+    <h2>사용 가능</h2>
+    <input type="text"><br><br>
+    <h2>사용 불가능</h2>
+    <input type="text" disabled><br><br>
+</body>
+</html>
