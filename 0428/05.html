@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            font-family: 'Times New Roman', Times, serif;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 20px;
+            background: linear-gradient(
+            270deg,
+            #ff9a9e,
+            #fad0c4,
+            #fbc2eb,
+            #a18cd1,
+            #84fab0,
+            #8fd3f4
+            );
+            background-size: 400% 400%;
+            animation: gradientMove 8s ease infinite;
+            }
+
+            @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Gradient Text</h1>
+    </div>
+</body>
+</html>
