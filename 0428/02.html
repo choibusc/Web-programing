@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            position:absolute;
+        }
+ 
+        .box:nth-child(1){
+            background-color: #ff0000;
+            left: 10px;
+            top: 10px;
+            z-index: 100;
+        }
+        .box:nth-child(2){
+            background-color: #1d4e1d;
+            left: 50px;
+            top: 50px;
+            z-index: 50;
+        }
+        .box:nth-child(3){
+            background-color: #272ae7;
+            left: 90px;
+            top: 90px;
+            z-index: 90;
+        }
+        body > div {
+            width: 500px;
+            height: 100px;
+            border-width: 10px;
+            border-color: black;
+            border-style: solid;
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>Box의 위쪽에 있는 h1</h1>
+    <div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div> 
+    </div>
+    <h1>Box의 아래쪽에 있는 h1</h1>
+   
+</body>
+</html>
