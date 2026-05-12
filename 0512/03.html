@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            border-width: 3px;
+            border-style: solid;
+            border-color: black;
+            overflow: hidden;
+        }
+        .circle {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50% 50%;
+        }
+        #red {
+            background-color: red;
+            top: 20px;
+            left: 20px;
+        }
+        #green {
+            background-color: green;
+            top: 20px;
+            right: 20px;
+        }
+        #yellow {
+            background-color: yellow;
+            bottom: 20px;
+            left: 20px;
+        }
+        #blue {
+            background-color: blue;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>부모요소는 position을 relative로 설정해야</h1>
+    <div id="container">
+        <div id="red" class="circle"></div>
+        <div id="green" class="circle"></div>
+        <div id="blue" class="circle"></div>
+        <div id="yellow" class="circle"></div>
+    </div>
+    <h1>자식요소는 absolute로 설정해서 절대위치에 배치할 수 있다.</h1>
+</body>
+</html>
