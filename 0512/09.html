@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 950px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #menu {
+            width: 260px;
+            float: left;
+        }
+        #content {
+            width: 700px;
+            float: right;
+        }
+        li {
+            list-style: none;
+        }
+
+        @media  screen and (max-width: 767px) {
+            body {
+                width: auto;
+            }
+            #menu {
+                width: auto;
+                float: none;
+            }
+            #content {
+                width: auto;
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <ul>
+            <li>menu 1</li>
+            <li>menu 2</li>
+            <li>menu 3</li>
+        </ul>
+    </div>
+    <div id="content">
+        <p>
+            lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas minus perspiciatis,
+            lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas minus perspiciatis,
+            lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas minus perspiciatis,
+        </p>
+        <p>
+            lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas minus perspiciatis,
+            lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas minus perspiciatis,
+            lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas minus perspiciatis,
+        </p>
+        <p>
+            lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas minus perspiciatis,
+            lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas minus perspiciatis,
+            lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas minus perspiciatis,
+        </p>
+    </div>
+</body>
+</html>
