@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arrNames = ["장원영", "안유진", "카리나", "레이", "리즈", "이서"];
+
+        arrNames[2] = "가을";
+        let iveNames;
+
+        // for(let i = 0; i < arrNames.length; i++) {
+        //     iveNames += arrNames[i] + " ";
+        // }
+
+        arrNames.forEach(name => {
+            iveNames += name + " ";
+        });
+        
+        alert(iveNames);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
