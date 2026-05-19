@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let Date = new Date();
+        let hours = Date.getHours();
+
+        if(hours < 5) {
+            alert("새벽입니다. 좀 더 주무세요.");
+        } else {
+            if(hours < 7)
+                alert("일어나서 출근준비를 하세요.");
+            else {
+                if(hours <9)
+                    alert("회사에 출근 중입니다.");
+                else{
+                    if(hours < 12){
+                        alert("회사에서 일하고 있습니다.");
+                    } else {
+                        if(hours < 13){
+                            alert("점심시간입니다.");
+                        } else {
+                            if(hours < 18){
+                                alert("회사에서 일하고 있습니다.");
+                            } else {
+                                alert("퇴근 시간입니다.");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        alert("현재 시간은 " + hours + "시입니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
