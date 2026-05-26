@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명함수 실행 우선순위</title>
+    <script>
+        let anmFunc = function(){
+        alert("1> 익명함수입니다.");
+        }
+        anmFunc = function(){
+        alert("2> 익명함수입니다.");
+        }
+        // alert(typeof(anmFunc)+ ":" + anmFunc);
+    </script>
+</head>
+<body>
+    <button onclick="anmFunc()">익명함수 실행</button>
+</body>
+</html>
