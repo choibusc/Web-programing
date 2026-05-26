@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function tentimes(callback){
+            for(let i=0; i<10; i++){
+                callback();
+            }
+        }
+        let fun = function(){
+            alert("익명함수 호출.");
+        }
+
+        //tentimes(funtion(){
+        //    alert("익명함수 호출.");
+        //})
+
+    </script>
+</head>
+<body>
+    <button onclick="tentimes(fun)">10번 호출</button>
+</body>
+</html>
