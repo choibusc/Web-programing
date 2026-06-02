@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //textContent, innerHTML
+        window.onload = function(){
+                let img1 = document.getElementById("img1");
+
+                img1.src = "imgs/Mercedes2.jpg";
+                img1.width = 300;
+                img1.height = 200;
+        }
+
+        function changeImage() {
+            let img1 = document.getElementById("img1");
+
+            img1.src = "imgs/animal.jpg";
+            img1.width = 300;
+            img1.height = 200;
+        }
+
+        function changeImage(btn){
+
+            img1.src = "imgs/animal.jpg";
+            btn.innerText = "이미지변경";
+        }
+    </script>
+</head>
+<body>
+    <button onclick="changeImage()">동물이미지 변경</button>
+    <br><br>
+    <img id="img1">
+</body>
+</html>
