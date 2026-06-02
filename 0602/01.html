@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //textContent, innerHTML
+        window.onload = function(){
+            let output = "";
+            for (let i = 0; i < 10; i++){
+                output += "<h1>Heading - " + i + "</h1>";
+            }
+
+            //순수한 문자열 그대로 출력
+            // document.body.textContent = output;
+            document.body.innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
