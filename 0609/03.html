@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            alert('jQuery 라이브러리가 정삭적으로 로드되었습니다');
+        });
+    </script>
+    <script>
+        $(function() {
+            $('#secound').css('color', 'magenta');
+            $('#secound').css('backgroundColor', 'black');
+            $('.third').css('color', 'black');
+            $('.\third').css('backgroundColor', 'magenta');
+        });
+    </script>
+</head>
+<body>
+    <h1>jQuery 라이브러리 설정 및 문법</h1>
+    <h1 id="secound">jQuery 라이브러리 설정 및 문법</h1>
+    <h1 class="third">jQuery 라이브러리 설정 및 문법</h1>
+</body>
+</html>

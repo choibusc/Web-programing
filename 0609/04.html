@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            let srcPath = $('#img1').attr('src');
+            $('#h2').text(srcPath);
+            $('#h2').css("color", "white");
+            $('#h2').css("backgroundColor", "black");
+            $('#h2').css("width", "500px");
+        });
+    </script>
+</head>
+<body>
+    <img src="imgs/fefe2.png" width="500" height="300" id="img1"><br><br>
+    <h2 id="h2"></h2>
+</body>
+</html>
