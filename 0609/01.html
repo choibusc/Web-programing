@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        window.onload = function() {
+        let a1 = document.getElementById("a1");
+        a1.onclick = function(event) {
+            return false;
+        };
+    }
         function greet() {
             alert('안녕하세요~ 인라인 이벤트 모델 2');
         }
@@ -47,6 +53,8 @@
     }
 
     setInterval(autoSlide, 1000);
+
+    
     </script>
 </head>
 <body>
@@ -55,4 +63,7 @@
     <button onclick="addSrt(this)">별추가</button><br><br>
     <button onmouseover="overChange(this)" onmouseout="outChange(this)">배경 및 글자색 변경</button><br><br>
     <img src="imgs/fefe1.png" width="500" height="300" onclick="changeImg(this)" style="cursor: pointer;"><br><br>
-    <img id="slideImg" src="imgs/fefe1.png" width="500" height="300">
+    <img id="slideImg" src="imgs/fefe1.png" width="500" height="300"><br><br>
+    <a href="https://www.naver.com/" id="a1">디폴트 이벤트 제거</a>
+</body>
+</html>
