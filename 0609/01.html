@@ -12,11 +12,47 @@
         function addSrt(btn) {
             btn.textContent += '⭐';
         }
+
+        function overChange(btn) {
+            btn.style.backgroundColor = 'blue';
+            btn.style.color = 'white';
+        }
+
+        function outChange(btn) {
+            btn.style.backgroundColor = 'white';
+            btn.style.color = 'black';
+        }
+
+        let count = 1;
+
+        function changeImg(img) {
+        count++;
+
+        if(count > 5) {
+            count = 1;
+        }
+
+        img.src = `imgs/fefe${count}.png`;
+    }
+        let slideCount = 1;
+
+        function autoSlide() {
+        slideCount++;
+
+        if(slideCount > 5) {
+            slideCount = 1;
+        }
+
+        document.getElementById("slideImg").src = `imgs/fefe${slideCount}.png`;
+    }
+
+    setInterval(autoSlide, 1000);
     </script>
 </head>
 <body>
     <button onclick="alert('인라인 이벤트 모델')">인라인 이벤트 모델 1</button><br><br>
     <button onclick="greet()">인라인 이벤트 모델 2</button><br><br>
-    <button onclick="addSrt(this)">별추가</button>
-</body>
-</html>
+    <button onclick="addSrt(this)">별추가</button><br><br>
+    <button onmouseover="overChange(this)" onmouseout="outChange(this)">배경 및 글자색 변경</button><br><br>
+    <img src="imgs/fefe1.png" width="500" height="300" onclick="changeImg(this)" style="cursor: pointer;"><br><br>
+    <img id="slideImg" src="imgs/fefe1.png" width="500" height="300">
