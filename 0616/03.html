@@ -5,30 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
-    <script>
-        $(document).ready(
-            function() {
-                $('h1').hover(
-                    function() {
-                        $(this).css({
-                              background: "blue",
-                              color: "white",
-                              width: "200px",
-                              height: "100px",
-                        });
-                    },
-                    function() {
-                        $(this).css({
-                              background: "",
-                              color: "",
-                        });
-                    }
-                )
+<script>
+    $(document).ready(
+        function(){
+        $("h1").click(
+            function(){
+                $(this).css({
+                    background : "red",
+                    color : "white",
+                    width : "200px",
+                    height : "50px",
+                });
             }
         );
-    </script>
+ 
+                $("h1").dblclick(
+                    function(){
+                        $(this).css({
+                            background : "",
+                            color : ""
+                        });
+                    }
+                );
+            });
+ 
+</script>
 </head>
 <body>
-    <h1>Clik Here</h1>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+<script>
+    $(document).ready(
+        function(){
+        $("h1").click(
+            function(){
+                $(this).css({
+                    background : "red",
+                    color : "white",
+                    width : "200px",
+                    height : "50px",
+                });
+            }
+        );
+ 
+                $("h1").dblclick(
+                    function(){
+                        $(this).css({
+                            background : "",
+                            color : ""
+                        });
+                    }
+                );
+            });
+ 
+</script>
+    <h1>Click Here</h1>
 </body>
 </html>
