@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        #box.hover{
+            background-color: blue;
+            border-radius: 50%;
+        }
+    </style>
+    <script>
+        $(document).ready(
+            function() {
+                $('#box').hover(
+                    function() {
+                        $(this).addClass('hover');
+                    },
+                    function() {
+                        $(this).removeClass('hover');
+                    }
+                )
+            }
+        );
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>
