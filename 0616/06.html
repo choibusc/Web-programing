@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <script>
+        $(document).ready(
+            function () {
+            $("#btn_fadetoggle").click( 
+                function () {
+                    $(".page").fadeToggle("slow");
+            });
+            $("#btn_toggle").click( 
+                function () {
+                    $(".page").toggle("slow");
+            });
+            $("#btn_slidetoggle").click( 
+                function () {
+                    $(".page").slideToggle("slow");
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <button id="btn_fadetoggle">Show Fade Toggle</button>&nbsp;
+    <button id="btn_toggle">Show Toggle</button>&nbsp;&nbsp;
+    <button id="btn_slidetoggle">Show Slide Toggle</button>
+    <div class="page">
+        <h1>jQuery Fade Toggle</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Vol
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Vol
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Vol
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Vol
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Vol
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Vol
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Vol
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Vol
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Voluptas, doloremque. Vol
+        </p>
+    </div>
+</body>
+</html>
