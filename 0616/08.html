@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+<script>
+    $(document).ready(
+        function(){
+        $("body").css("background", "black");
+
+        $("#box").css({
+            width : "100px",
+            height : "100px",
+            background : "orange",
+            position : "absolute",
+            left : "10px",
+            top : "10px"
+        }
+        ).animate({
+                width : "300px",
+                opacity : 0.2
+            }, 2000
+        ).animate({
+            opacity : 1.0,
+            left : "100px",
+            top : "100px"
+            }, 2000
+        );
+
+    });
+</script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>
