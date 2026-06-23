@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            let input1 = document.querySelectorAll("input")[0];
+            let input2 = document.querySelectorAll("input")[1];
+            
+            input1.onkeydown = function (e) {
+                if (input1.value.length >= 6) {
+                    input2.focus();
+                }
+            };
+
+            input2.onkeydown = function (e) {
+                if (event.keyCode === 8 && input2.value.length === 0) {
+                    input1.focus();
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    주민등록번호입력: <input type="text" maxlength="6"> - <input type="text" maxlength="7">
+</body>
+</html>

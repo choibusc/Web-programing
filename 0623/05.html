@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <script>
+        $(document).ready(
+            function () {
+            for (let i = 0; i < 10; i++) {
+                let hElement = $("<h1>created H1 Element Object + " + i + "</h1>");
+                hElement.css({
+                    backgroundColor: "orange",
+                    color: "white",
+                });
+                $("body").append(hElement);
+
+                hElement.dblclick(
+                    function () {
+                    $(this).remove();
+                });
+            }
+        }
+    );
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
