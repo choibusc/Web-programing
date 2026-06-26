@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula 1 소개 홈페이지</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 헤더 영역 -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">F1 Fan Page</h1>
+            <ul class="nav-menu">
+                <li><a href="#about">About F1</a></li>
+                <li><a href="#teams">Teams</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+        </nav>
+
+        <!-- 메인 배너 영역 -->
+        <section class="hero">
+            <div class="hero-text">
+                <h2>Formula 1</h2>
+                <p>F1</p>
+                <span>Speed · Technology · Competition</span>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <!-- About F1 섹션 -->
+        <section id="about" class="section">
+            <h2>About F1</h2>
+            <p>
+                Formula 1은 세계 최고 수준의 자동차 경주 대회입니다.
+                각 팀은 최첨단 기술이 적용된 레이싱카를 제작하고,
+                드라이버들은 전 세계의 서킷에서 경쟁합니다.
+            </p>
+
+            <div class="info-box">
+                <div>
+                    <h3>경기 방식</h3>
+                    <p>여러 나라의 서킷에서 레이스가 열리며, 가장 빠르게 완주한 드라이버가 우승합니다.</p>
+                </div>
+                <div>
+                    <h3>그랑프리</h3>
+                    <p>각 나라에서 열리는 F1 경기를 그랑프리라고 부릅니다.</p>
+                </div>
+                <div>
+                    <h3>포인트 제도</h3>
+                    <p>순위에 따라 포인트를 얻고, 시즌 종료 후 가장 높은 점수를 얻은 선수가 챔피언이 됩니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teams 섹션 -->
+        <section id="teams" class="section">
+            <h2>F1 Teams & Drivers</h2>
+
+            <!-- 드라이버 검색 영역 -->
+            <div class="search-area">
+                <label for="driverSearch">Search Driver</label>
+
+                <div class="search-box">
+                    <input type="text" id="driverSearch" placeholder="드라이버 이름 검색 예: max, leclerc, norris">
+                    <button type="button" id="resetSearch">초기화</button>
+                </div>
+
+                <p id="searchResultText">전체 드라이버가 표시되고 있습니다.</p>
+            </div>
+
+            <!-- 상위 대표 팀 4개 -->
+            <div class="team-container">
+
+                <article class="team-card mercedes">
+                    <h3><a href="https://www.mercedesamgf1.com/" target="_blank">Mercedes</a></h3>
+                    <div class="driver-list">
+                        <div class="team-driver">
+                            <div class="driver-photo">
+                                <img src="images/Russell.png" alt="George Russell">
+                            </div>
+                            <p class="driver-number">#63</p>
+                            <h4>George Russell</h4>
+                        </div>
+                        <div class="team-driver">
+                            <div class="driver-photo">
+                                <img src="images/Antonelli.png" alt="Kimi Antonelli">
+                            </div>
+                            <p class="driver-number">#12</p>
+                            <h4>Kimi Antonelli</h4>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="team-card ferrari">
+                    <h3><a href="https://www.ferrari.com/en-EN/formula1" target="_blank">Ferrari</a></h3>
+                    <div class="driver-list">
+                        <div class="team-driver">
+                            <div class="driver-photo">
+                                <img src="images/Leclerc.png" alt="Charles Leclerc">
+                            </div>
+                            <p class="driver-number">#16</p>
+                            <h4>Charles Leclerc</h4>
+                        </div>
+                        <div class="team-driver">
+                            <div class="driver-photo">
+                                <img src="images/Hamillton.png" alt="Lewis Hamilton">
+                            </div>
+                            <p class="driver-number">#44</p>
+                            <h4>Lewis Hamilton</h4>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="team-card redbull">
+                    <h3><a href="https://www.redbullracing.com/" target="_blank">Red Bull Racing</a></h3>
+                    <div class="driver-list">
+                        <div class="team-driver">
+                            <div class="driver-photo">
+                                <img src="images/Verstappen.png" alt="Max Verstappen">
+                            </div>
+                            <p class="driver-number">#3</p>
+                            <h4>Max Verstappen</h4>
+                        </div>
+                        <div class="team-driver">
+                            <div class="driver-photo">
+                                <img src="images/Hadjar.png" alt="Isack Hadjar">
+                            </div>
+                            <p class="driver-number">#6</p>
+                            <h4>Isack Hadjar</h4>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="team-card mclaren">
+                    <h3><a href="https://www.mclaren.com/racing/formula-1/" target="_blank">McLaren</a></h3>
+                    <div class="driver-list">
+                        <div class="team-driver">
+                            <div class="driver-photo">
+                                <img src="images/Norris.png" alt="Lando Norris">
+                            </div>
+                            <p class="driver-number">#1</p>
+                            <h4>Lando Norris</h4>
+                        </div>
+                        <div class="team-driver">
+                            <div class="driver-photo">
+                                <img src="images/Piastri.png" alt="Oscar Piastri">
+                            </div>
+                            <p class="driver-number">#81</p>
+                            <h4>Oscar Piastri</h4>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- 더보기 영역 -->
+            <details class="more-teams">
+                <summary>
+                    <span class="open-text">팀 더보기</span>
+                    <span class="close-text">접기</span>
+                </summary>
+
+                <div class="team-container more-team-container">
+
+                    <article class="team-card alpine">
+                        <h3><a href="https://www.alpinecars.com/formula-1/" target="_blank">Alpine</a></h3>
+                        <div class="driver-list">
+                            <div class="team-driver">
+                                <div class="driver-photo">
+                                    <img src="images/Gasly.png" alt="Pierre Gasly">
+                                </div>
+                                <p class="driver-number">#10</p>
+                                <h4>Pierre Gasly</h4>
+                            </div>
+                            <div class="team-driver">
+                                <div class="driver-photo">
+                                    <img src="images/Colapinto.png" alt="Franco Colapinto">
+                                </div>
+                                <p class="driver-number">#43</p>
+                                <h4>Franco Colapinto</h4>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="team-card haas">
+                        <h3><a href="https://www.haasf1team.com/" target="_blank">Haas F1 Team</a></h3>
+                        <div class="driver-list">
+                            <div class="team-driver">
+                                <div class="driver-photo">
+                                    <img src="images/Ocon.png" alt="Esteban Ocon">
+                                </div>
+                                <p class="driver-number">#31</p>
+                                <h4>Esteban Ocon</h4>
+                            </div>
+                            <div class="team-driver">
+                                <div class="driver-photo">
+                                    <img src="images/Bearman.png" alt="Oliver Bearman">
+                                </div>
+                                <p class="driver-number">#87</p>
+                                <h4>Oliver Bearman</h4>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="team-card racingbulls">
+                        <h3><a href="https://www.visacashapprb.com/" target="_blank">Racing Bulls</a></h3>
+                        <div class="driver-list">
+                            <div class="team-driver">
+                                <div class="driver-photo">
+                                    <img src="images/Lawson.png" alt="Liam Lawson">
+                                </div>
+                                <p class="driver-number">#30</p>
+                                <h4>Liam Lawson</h4>
+                            </div>
+                            <div class="team-driver">
+                                <div class="driver-photo">
+                                    <img src="images/Lindblad.png" alt="Arvid Lindblad">
+                                </div>
+                                <p class="driver-number">#41</p>
+                                <h4>Arvid Lindblad</h4>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="team-card williams">
+                        <h3><a href="https://www.williamsf1.com/" target="_blank">Williams</a></h3>
+                        <div class="driver-list">
+                            <div class="team-driver">
+                                <div class="driver-photo">
+                                    <img src="images/Albon.png" alt="Alexander Albon">
+                                </div>
+                                <p class="driver-number">#23</p>
+                                <h4>Alexander Albon</h4>
+                            </div>
+                            <div class="team-driver">
+                                <div class="driver-photo">
+                                    <img src="images/Sainz.png" alt="Carlos Sainz">
+                                </div>
+                                <p class="driver-number">#55</p>
+                                <h4>Carlos Sainz</h4>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="team-card audi">
+                        <h3><a href="https://www.audi.com/en/sport/formula-1.html" target="_blank">Audi</a></h3>
+                        <div class="driver-list">
+                            <div class="team-driver">
+                                <div class="driver-photo">
+                                    <img src="images/Hulkenberg.png" alt="Nico Hulkenberg">
+                                </div>
+                                <p class="driver-number">#27</p>
+                                <h4>Nico Hulkenberg</h4>
+                            </div>
+                            <div class="team-driver">
+                                <div class="driver-photo">
+                                    <img src="images/Bortoleto.png" alt="Gabriel Bortoleto">
+                                </div>
+                                <p class="driver-number">#5</p>
+                                <h4>Gabriel Bortoleto</h4>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="team-card aston">
+                        <h3><a href="https://www.astonmartinf1.com/" target="_blank">Aston Martin</a></h3>
+                        <div class="driver-list">
+                            <div class="team-driver">
+                                <div class="driver-photo">
+                                    <img src="images/Alonso.png" alt="Fernando Alonso">
+                                </div>
+                                <p class="driver-number">#14</p>
+                                <h4>Fernando Alonso</h4>
+                            </div>
+                            <div class="team-driver">
+                                <div class="driver-photo">
+                                    <img src="images/Stroll.png" alt="Lance Stroll">
+                                </div>
+                                <p class="driver-number">#18</p>
+                                <h4>Lance Stroll</h4>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="team-card cadillac">
+                        <h3><a href="https://www.cadillac.com/formula-1" target="_blank">Cadillac</a></h3>
+                        <div class="driver-list">
+                            <div class="team-driver">
+                                <div class="driver-photo">
+                                    <img src="images/Perez.png" alt="Sergio Perez">
+                                </div>
+                                <p class="driver-number">#11</p>
+                                <h4>Sergio Perez</h4>
+                            </div>
+                            <div class="team-driver">
+                                <div class="driver-photo">
+                                    <img src="images/Bottas.png" alt="Valtteri Bottas">
+                                </div>
+                                <p class="driver-number">#77</p>
+                                <h4>Valtteri Bottas</h4>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </details>
+        </section>
+
+        <!-- Technology 섹션 -->
+        <section id="technology" class="section">
+            <h2>F1 Technology</h2>
+            <div class="tech-container">
+                <div class="tech-box">
+                    <h3>공기역학</h3>
+                    <p>차량이 빠르게 달릴 때 안정적으로 코너를 돌 수 있도록 도와줍니다.</p>
+                </div>
+
+                <div class="tech-box">
+                    <h3>하이브리드 파워유닛</h3>
+                    <p>엔진과 전기 에너지를 함께 사용하여 높은 성능을 냅니다.</p>
+                </div>
+
+                <div class="tech-box">
+                    <h3>타이어 전략</h3>
+                    <p>타이어 종류와 교체 시점은 경기 결과에 큰 영향을 줍니다.</p>
+                </div>
+
+                <div class="tech-box">
+                    <h3>피트스톱</h3>
+                    <p>몇 초 안에 타이어를 교체하는 팀워크가 중요한 요소입니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery 섹션 -->
+        <section id="gallery" class="section">
+            <h2>Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-card">Racing Track</div>
+                <div class="gallery-card">F1 Machine</div>
+                <div class="gallery-card">Pit Stop</div>
+                <div class="gallery-card">Grand Prix</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Formula 1 Fan Page</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
