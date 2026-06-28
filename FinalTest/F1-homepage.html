@@ -20,8 +20,15 @@
             </ul>
         </nav>
 
-        <!-- 메인 배너 영역 -->
+        <!-- 메인 배너 영역 (자동 슬라이드 - 4장으로 늘어남) -->
         <section class="hero">
+            <div class="hero-slider">
+                <div class="slide active" style="background-image: url('images/hero1.jpg');"></div>
+                <div class="slide" style="background-image: url('images/hero2.jpg');"></div>
+                <div class="slide" style="background-image: url('images/hero3.jpg');"></div>
+                <div class="slide" style="background-image: url('images/hero4.jpg');"></div>
+            </div>
+
             <div class="hero-text">
                 <h2>Formula 1</h2>
                 <p>F1</p>
@@ -78,14 +85,14 @@
                 <article class="team-card mercedes">
                     <h3><a href="https://www.mercedesamgf1.com/" target="_blank">Mercedes</a></h3>
                     <div class="driver-list">
-                        <div class="team-driver">
+                        <div class="team-driver" data-name="George Russell" data-number="#63" data-team="Mercedes" data-country="United Kingdom" data-title="0" data-description="꾸준한 성적과 안정적인 레이스 운영 능력을 보여주는 메르세데스의 에이스입니다." data-image="images/Russell.png">
                             <div class="driver-photo">
                                 <img src="images/Russell.png" alt="George Russell">
                             </div>
                             <p class="driver-number">#63</p>
                             <h4>George Russell</h4>
                         </div>
-                        <div class="team-driver">
+                        <div class="team-driver" data-name="Kimi Antonelli" data-number="#12" data-team="Mercedes" data-country="Italy" data-title="0" data-description="메르세데스가 큰 기대를 걸고 발탁한 놀라운 재능의 차세대 이탈리안 루키입니다." data-image="images/Antonelli.png">
                             <div class="driver-photo">
                                 <img src="images/Antonelli.png" alt="Kimi Antonelli">
                             </div>
@@ -98,14 +105,14 @@
                 <article class="team-card ferrari">
                     <h3><a href="https://www.ferrari.com/en-EN/formula1" target="_blank">Ferrari</a></h3>
                     <div class="driver-list">
-                        <div class="team-driver">
+                        <div class="team-driver" data-name="Charles Leclerc" data-number="#16" data-team="Ferrari" data-country="Monaco" data-title="0" data-description="페라리의 프랜차이즈 스타로, 타의 추종을 불허하는 압도적인 예선 주행 능력을 자랑합니다." data-image="images/Leclerc.png">
                             <div class="driver-photo">
                                 <img src="images/Leclerc.png" alt="Charles Leclerc">
                             </div>
                             <p class="driver-number">#16</p>
                             <h4>Charles Leclerc</h4>
                         </div>
-                        <div class="team-driver">
+                        <div class="team-driver" data-name="Lewis Hamilton" data-number="#44" data-team="Ferrari" data-country="United Kingdom" data-title="7" data-description="F1 역사상 가장 성공한 7회 월드 챔피언 중 한 명으로, 페라리로 이적하여 새로운 역사를 쓰고 있는 살아있는 전설입니다." data-image="images/Hamillton.png">
                             <div class="driver-photo">
                                 <img src="images/Hamillton.png" alt="Lewis Hamilton">
                             </div>
@@ -118,14 +125,14 @@
                 <article class="team-card redbull">
                     <h3><a href="https://www.redbullracing.com/" target="_blank">Red Bull Racing</a></h3>
                     <div class="driver-list">
-                        <div class="team-driver">
+                        <div class="team-driver" data-name="Max Verstappen" data-number="#3" data-team="Red Bull Racing" data-country="Netherlands" data-title="4" data-description="4연속 월드 챔피언(2021~2024)을 달성하며 압도적인 스피드와 강력한 드라이빙으로 F1 무대를 호령하는 선수입니다." data-image="images/Verstappen.png">
                             <div class="driver-photo">
                                 <img src="images/Verstappen.png" alt="Max Verstappen">
                             </div>
                             <p class="driver-number">#3</p>
                             <h4>Max Verstappen</h4>
                         </div>
-                        <div class="team-driver">
+                        <div class="team-driver" data-name="Isack Hadjar" data-number="#6" data-team="Red Bull Racing" data-country="France" data-title="0" data-description="레드불 유스 시스템을 거쳐 강력한 잠재력과 스피드를 인정받은 젊은 드라이버입니다." data-image="images/Hadjar.png">
                             <div class="driver-photo">
                                 <img src="images/Hadjar.png" alt="Isack Hadjar">
                             </div>
@@ -138,14 +145,14 @@
                 <article class="team-card mclaren">
                     <h3><a href="https://www.mclaren.com/racing/formula-1/" target="_blank">McLaren</a></h3>
                     <div class="driver-list">
-                        <div class="team-driver">
+                        <div class="team-driver" data-name="Lando Norris" data-number="#1" data-team="McLaren" data-country="United Kingdom" data-title="1" data-description="2025년 생애 첫 월드 챔피언에 등극하며 맥라렌의 부활을 완벽하게 이끌어낸 영국 출신의 최고 에이스입니다." data-image="images/Norris.png">
                             <div class="driver-photo">
                                 <img src="images/Norris.png" alt="Lando Norris">
                             </div>
                             <p class="driver-number">#1</p>
                             <h4>Lando Norris</h4>
                         </div>
-                        <div class="team-driver">
+                        <div class="team-driver" data-name="Oscar Piastri" data-number="#81" data-team="McLaren" data-country="Australia" data-title="0" data-description="베테랑과 같은 침착함과 놀라운 레이스 크래프트를 보여주며 팀의 더블 타이틀을 이끄는 뛰어난 선수입니다." data-image="images/Piastri.png">
                             <div class="driver-photo">
                                 <img src="images/Piastri.png" alt="Oscar Piastri">
                             </div>
@@ -169,14 +176,14 @@
                     <article class="team-card alpine">
                         <h3><a href="https://www.alpinecars.com/formula-1/" target="_blank">Alpine</a></h3>
                         <div class="driver-list">
-                            <div class="team-driver">
+                            <div class="team-driver" data-name="Pierre Gasly" data-number="#10" data-team="Alpine" data-country="France" data-title="0" data-description="알핀의 주축 드라이버로 언제나 끈질기고 안정적인 레이스 운영이 돋보입니다." data-image="images/Gasly.png">
                                 <div class="driver-photo">
                                     <img src="images/Gasly.png" alt="Pierre Gasly">
                                 </div>
                                 <p class="driver-number">#10</p>
                                 <h4>Pierre Gasly</h4>
                             </div>
-                            <div class="team-driver">
+                            <div class="team-driver" data-name="Franco Colapinto" data-number="#43" data-team="Alpine" data-country="Argentina" data-title="0" data-description="뛰어난 적응력과 패기 넘치는 스피드로 단숨에 두각을 나타낸 아르헨티나의 유망주입니다." data-image="images/Colapinto.png">
                                 <div class="driver-photo">
                                     <img src="images/Colapinto.png" alt="Franco Colapinto">
                                 </div>
@@ -189,14 +196,14 @@
                     <article class="team-card haas">
                         <h3><a href="https://www.haasf1team.com/" target="_blank">Haas F1 Team</a></h3>
                         <div class="driver-list">
-                            <div class="team-driver">
+                            <div class="team-driver" data-name="Esteban Ocon" data-number="#31" data-team="Haas F1 Team" data-country="France" data-title="0" data-description="치열한 휠투휠 배틀에 강하며, 팀을 위해 꾸준하게 포인트를 가져오는 선수입니다." data-image="images/Ocon.png">
                                 <div class="driver-photo">
                                     <img src="images/Ocon.png" alt="Esteban Ocon">
                                 </div>
                                 <p class="driver-number">#31</p>
                                 <h4>Esteban Ocon</h4>
                             </div>
-                            <div class="team-driver">
+                            <div class="team-driver" data-name="Oliver Bearman" data-number="#87" data-team="Haas F1 Team" data-country="United Kingdom" data-title="0" data-description="하위 카테고리부터 뛰어난 재능으로 많은 주목을 받아온 실력파 젊은 드라이버입니다." data-image="images/Bearman.png">
                                 <div class="driver-photo">
                                     <img src="images/Bearman.png" alt="Oliver Bearman">
                                 </div>
@@ -209,14 +216,14 @@
                     <article class="team-card racingbulls">
                         <h3><a href="https://www.visacashapprb.com/" target="_blank">Racing Bulls</a></h3>
                         <div class="driver-list">
-                            <div class="team-driver">
+                            <div class="team-driver" data-name="Liam Lawson" data-number="#30" data-team="Racing Bulls" data-country="New Zealand" data-title="0" data-description="대체 투입될 때마다 놀라운 적응력과 확실한 퍼포먼스를 보여준 실력파 드라이버입니다." data-image="images/Lawson.png">
                                 <div class="driver-photo">
                                     <img src="images/Lawson.png" alt="Liam Lawson">
                                 </div>
                                 <p class="driver-number">#30</p>
                                 <h4>Liam Lawson</h4>
                             </div>
-                            <div class="team-driver">
+                            <div class="team-driver" data-name="Arvid Lindblad" data-number="#41" data-team="Racing Bulls" data-country="United Kingdom" data-title="0" data-description="레드불 유스 시스템이 키워낸 또 단 차세대 특급 유망주입니다." data-image="images/Lindblad.png">
                                 <div class="driver-photo">
                                     <img src="images/Lindblad.png" alt="Arvid Lindblad">
                                 </div>
@@ -229,14 +236,14 @@
                     <article class="team-card williams">
                         <h3><a href="https://www.williamsf1.com/" target="_blank">Williams</a></h3>
                         <div class="driver-list">
-                            <div class="team-driver">
+                            <div class="team-driver" data-name="Alexander Albon" data-number="#23" data-team="Williams" data-country="Thailand" data-title="0" data-description="윌리엄스의 부활을 든든하게 이끌고 있는 믿음직한 에이스 드라이버입니다." data-image="images/Albon.png">
                                 <div class="driver-photo">
                                     <img src="images/Albon.png" alt="Alexander Albon">
                                 </div>
                                 <p class="driver-number">#23</p>
                                 <h4>Alexander Albon</h4>
                             </div>
-                            <div class="team-driver">
+                            <div class="team-driver" data-name="Carlos Sainz" data-number="#55" data-team="Williams" data-country="Spain" data-title="0" data-description="아주 지능적인 레이스 운영 능력과 탄탄한 기본기를 두루 갖춘 베테랑입니다." data-image="images/Sainz.png">
                                 <div class="driver-photo">
                                     <img src="images/Sainz.png" alt="Carlos Sainz">
                                 </div>
@@ -249,14 +256,14 @@
                     <article class="team-card audi">
                         <h3><a href="https://www.audi.com/en/sport/formula-1.html" target="_blank">Audi</a></h3>
                         <div class="driver-list">
-                            <div class="team-driver">
+                            <div class="team-driver" data-name="Nico Hulkenberg" data-number="#27" data-team="Audi" data-country="Germany" data-title="0" data-description="풍부한 경험과 엄청난 퀄리파잉(예선) 퍼포먼스를 뽐내는 실력파 드라이버입니다." data-image="images/Hulkenberg.png">
                                 <div class="driver-photo">
                                     <img src="images/Hulkenberg.png" alt="Nico Hulkenberg">
                                 </div>
                                 <p class="driver-number">#27</p>
                                 <h4>Nico Hulkenberg</h4>
                             </div>
-                            <div class="team-driver">
+                            <div class="team-driver" data-name="Gabriel Bortoleto" data-number="#5" data-team="Audi" data-country="Brazil" data-title="0" data-description="하위 카테고리를 완벽히 평정하고 F1 무대에 올라온 브라질의 최고 기대주입니다." data-image="images/Bortoleto.png">
                                 <div class="driver-photo">
                                     <img src="images/Bortoleto.png" alt="Gabriel Bortoleto">
                                 </div>
@@ -269,14 +276,14 @@
                     <article class="team-card aston">
                         <h3><a href="https://www.astonmartinf1.com/" target="_blank">Aston Martin</a></h3>
                         <div class="driver-list">
-                            <div class="team-driver">
+                            <div class="team-driver" data-name="Fernando Alonso" data-number="#14" data-team="Aston Martin" data-country="Spain" data-title="2" data-description="2회 월드 챔피언 출신으로, 불굴의 투지와 마법 같은 레이스 크래프트를 보여주는 F1의 살아있는 전설입니다." data-image="images/Alonso.png">
                                 <div class="driver-photo">
                                     <img src="images/Alonso.png" alt="Fernando Alonso">
                                 </div>
                                 <p class="driver-number">#14</p>
                                 <h4>Fernando Alonso</h4>
                             </div>
-                            <div class="team-driver">
+                            <div class="team-driver" data-name="Lance Stroll" data-number="#18" data-team="Aston Martin" data-country="Canada" data-title="0" data-description="날카로운 스타트 능력과 특히 비 오는 날(웻 컨디션)에 강점을 보이는 선수입니다." data-image="images/Stroll.png">
                                 <div class="driver-photo">
                                     <img src="images/Stroll.png" alt="Lance Stroll">
                                 </div>
@@ -289,14 +296,14 @@
                     <article class="team-card cadillac">
                         <h3><a href="https://www.cadillac.com/formula-1" target="_blank">Cadillac</a></h3>
                         <div class="driver-list">
-                            <div class="team-driver">
+                            <div class="team-driver" data-name="Sergio Perez" data-number="#11" data-team="Cadillac" data-country="Mexico" data-title="0" data-description="신들린 타이어 관리 능력을 가져 '타이어 깎는 장인'이라 불리는 노련한 베테랑입니다." data-image="images/Perez.png">
                                 <div class="driver-photo">
                                     <img src="images/Perez.png" alt="Sergio Perez">
                                 </div>
                                 <p class="driver-number">#11</p>
                                 <h4>Sergio Perez</h4>
                             </div>
-                            <div class="team-driver">
+                            <div class="team-driver" data-name="Valtteri Bottas" data-number="#77" data-team="Cadillac" data-country="Finland" data-title="0" data-description="수년간 월드 챔피언 팀에서 검증받은 빠른 속도와 팀플레이 능력을 지닌 선수입니다." data-image="images/Bottas.png">
                                 <div class="driver-photo">
                                     <img src="images/Bottas.png" alt="Valtteri Bottas">
                                 </div>
@@ -351,6 +358,34 @@
     <footer>
         <p>Formula 1 Fan Page</p>
     </footer>
+
+    <!-- 드라이버 상세정보 모달(팝업) 창 -->
+    <div class="modal-overlay" id="driverModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            
+            <div class="modal-header">
+                <h3 id="modalName">Driver Name</h3>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-image-wrap">
+                    <img id="modalImage" src="" alt="Driver Image">
+                </div>
+                
+                <div class="modal-info">
+                    <p><strong>번호 :</strong> <span id="modalNumber">#00</span></p>
+                    <p><strong>팀 :</strong> <span id="modalTeam">Team Name</span></p>
+                    <p><strong>국적 :</strong> <span id="modalCountry">Country</span></p>
+                    <p><strong>World Champion :</strong> <span id="modalTitle">0</span>회</p>
+                    
+                    <div class="modal-desc" id="modalDesc">
+                        <p>드라이버 설명이 여기에 표시됩니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

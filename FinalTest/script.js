@@ -1,7 +1,7 @@
-// 드라이버 검색 기능
-// 사용 기술: input 이벤트, querySelectorAll(), includes()
+// ==========================================
+// 1. 기존 드라이버 검색 기능
+// ==========================================
 
-// HTML 요소 가져오기
 const searchInput = document.querySelector("#driverSearch");
 const resetButton = document.querySelector("#resetSearch");
 const resultText = document.querySelector("#searchResultText");
@@ -21,7 +21,6 @@ function searchDriver() {
     const keyword = searchInput.value.toLowerCase().trim();
     let matchCount = 0;
 
-    // 검색어가 없으면 전체 다시 표시
     if (keyword === "") {
         teamCards.forEach(function(teamCard) {
             teamCard.classList.remove("hide-card");
@@ -37,38 +36,31 @@ function searchDriver() {
         return;
     }
 
-    // 검색하면 더보기 팀 자동 펼치기
     if (moreTeams) {
         moreTeams.open = true;
     }
 
-    // 모든 팀 카드 숨기기
     teamCards.forEach(function(teamCard) {
         teamCard.classList.add("hide-card");
     });
 
-    // 모든 드라이버 검사
     driverCards.forEach(function(driverCard) {
         const driverName = driverCard.querySelector("h4").textContent.toLowerCase();
 
         if (driverName.includes(keyword)) {
-            // 검색어와 일치하는 드라이버 표시
             driverCard.classList.remove("hide-card");
             driverCard.classList.add("match-driver");
 
-            // 해당 드라이버가 속한 팀 카드 표시
             const parentTeam = driverCard.closest(".team-card");
             parentTeam.classList.remove("hide-card");
 
             matchCount++;
         } else {
-            // 검색어와 맞지 않는 드라이버 숨기기
             driverCard.classList.add("hide-card");
             driverCard.classList.remove("match-driver");
         }
     });
 
-    // 검색 결과 문구 표시
     if (matchCount > 0) {
         noResultBox.style.display = "none";
         resultText.textContent = matchCount + "명의 드라이버가 검색되었습니다.";
@@ -84,6 +76,81 @@ function resetSearch() {
     searchDriver();
 }
 
-// 이벤트 연결
+// 검색 이벤트 연결
 searchInput.addEventListener("input", searchDriver);
 resetButton.addEventListener("click", resetSearch);
+
+
+// ==========================================
+// 2. 드라이버 상세정보 모달(팝업) 기능
+// ==========================================
+
+const modalOverlay = document.querySelector("#driverModal");
+const closeModalBtn = document.querySelector("#closeModal");
+
+const modalName = document.querySelector("#modalName");
+const modalImage = document.querySelector("#modalImage");
+const modalNumber = document.querySelector("#modalNumber");
+const modalTeam = document.querySelector("#modalTeam");
+const modalCountry = document.querySelector("#modalCountry");
+const modalTitle = document.querySelector("#modalTitle");
+const modalDesc = document.querySelector("#modalDesc");
+
+driverCards.forEach(function(card) {
+    card.addEventListener("click", function(e) {
+        const driver = e.currentTarget.closest(".team-driver");
+
+        const name = driver.dataset.name;
+        const number = driver.dataset.number;
+        const team = driver.dataset.team;
+        const country = driver.dataset.country;
+        const title = driver.dataset.title;
+        const desc = driver.dataset.description;
+        const imageSrc = driver.dataset.image;
+
+        modalName.textContent = name;
+        modalNumber.textContent = number;
+        modalTeam.textContent = team;
+        modalCountry.textContent = country;
+        modalTitle.textContent = title;
+        modalImage.src = imageSrc;
+        modalImage.alt = name + " 사진";
+        
+        modalDesc.innerHTML = "<p>" + desc + "</p>";
+
+        modalOverlay.classList.add("active");
+    });
+});
+
+function closeModal() {
+    modalOverlay.classList.remove("active");
+}
+
+closeModalBtn.addEventListener("click", closeModal);
+
+modalOverlay.addEventListener("click", function(e) {
+    if (e.target === modalOverlay) {
+        closeModal();
+    }
+});
+
+document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape" && modalOverlay.classList.contains("active")) {
+        closeModal();
+    }
+});
+
+
+// ==========================================
+// 3. 메인 배너(Hero) 배경 이미지 자동 슬라이드 기능
+// ==========================================
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+
+if (slides.length > 0) {
+    setInterval(function() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }, 4000);
+}

@@ -16,14 +16,14 @@ p {
     word-break: keep-all;
 }
 
-/* 네비게이션 */
+/* 네비게이션 (그라데이션 유지) */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     padding: 22px 8%;
-    background-color: #111;
+    background: linear-gradient(90deg, #000000, #1a1a1a, #e10600);
     border-bottom: 2px solid #e10600;
 }
 
@@ -50,20 +50,48 @@ p {
     color: #e10600;
 }
 
-/* 메인 배너 */
+/* 메인 배너 (자동 슬라이더 지원) */
 .hero {
     height: 500px;
-
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-
-    background: linear-gradient(135deg, #000, #1a1a1a, #e10600);
     border-bottom: 4px solid #e10600;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+}
+
+.hero-slider {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 0;
+}
+
+.slide {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
 }
 
 .hero-text {
+    position: relative;
+    z-index: 2;
     padding: 40px;
     border: 2px solid #ffffff55;
     border-radius: 20px;
@@ -246,56 +274,16 @@ p {
 }
 
 /* 팀별 색상 */
-.mercedes {
-    background: linear-gradient(135deg, #002b2b, #008c86);
-    border-color: #00d2be;
-}
-
-.ferrari {
-    background: linear-gradient(135deg, #350000, #9b0000);
-    border-color: #ff2800;
-}
-
-.redbull {
-    background: linear-gradient(135deg, #050a30, #102b80);
-    border-color: #1e41ff;
-}
-
-.mclaren {
-    background: linear-gradient(135deg, #3b1c00, #ff8700);
-    border-color: #ff8700;
-}
-
-.alpine {
-    background: linear-gradient(135deg, #001b3d, #0078c9, #ff69b4);
-    border-color: #ff69b4;
-}
-
-.haas {
-    background: linear-gradient(135deg, #111, #555, #b6babd);
-    border-color: #b6babd;
-}
-
-.racingbulls {
-    background: linear-gradient(135deg, #001f3f, #003cff, #ffffff);
-    border-color: #3b6fff;
-}
-
-.williams {
-    background: linear-gradient(135deg, #001a33, #005aff);
-    border-color: #005aff;
-}
-
-.audi {
-    background: linear-gradient(135deg, #111, #333, #c0c0c0);
-    border-color: #c0c0c0;
-}
-
-.aston {
-    background: linear-gradient(135deg, #00352f, #006f62);
-    border-color: #009b8f;
-}
-
+.mercedes { background: linear-gradient(135deg, #002b2b, #008c86); border-color: #00d2be; }
+.ferrari { background: linear-gradient(135deg, #350000, #9b0000); border-color: #ff2800; }
+.redbull { background: linear-gradient(135deg, #050a30, #102b80); border-color: #1e41ff; }
+.mclaren { background: linear-gradient(135deg, #3b1c00, #ff8700); border-color: #ff8700; }
+.alpine { background: linear-gradient(135deg, #001b3d, #0078c9, #ff69b4); border-color: #ff69b4; }
+.haas { background: linear-gradient(135deg, #111, #555, #b6babd); border-color: #b6babd; }
+.racingbulls { background: linear-gradient(135deg, #001f3f, #003cff, #ffffff); border-color: #3b6fff; }
+.williams { background: linear-gradient(135deg, #001a33, #005aff); border-color: #005aff; }
+.audi { background: linear-gradient(135deg, #111, #333, #c0c0c0); border-color: #c0c0c0; }
+.aston { background: linear-gradient(135deg, #00352f, #006f62); border-color: #009b8f; }
 .cadillac {
     background: linear-gradient(135deg, #111, #7a003c, #d4af37);
     border-color: #d4af37;
@@ -306,9 +294,14 @@ p {
 
 /* 드라이버 카드 */
 .driver-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     gap: 15px;
+}
+.team-card:has(.match-driver) .team-driver {
+    width: 250px;
+    flex: 0 0 250px;
 }
 
 .team-driver {
@@ -320,6 +313,7 @@ p {
 
     text-align: center;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .team-driver:hover {
@@ -365,49 +359,17 @@ p {
 }
 
 /* 팀별 번호 색상 */
-.mercedes .driver-number {
-    color: #00d2be;
-}
-
-.ferrari .driver-number {
-    color: #ff2800;
-}
-
-.redbull .driver-number {
-    color: #4d73ff;
-}
-
-.mclaren .driver-number {
-    color: #ff8700;
-}
-
-.alpine .driver-number {
-    color: #ff69b4;
-}
-
-.haas .driver-number {
-    color: #b6babd;
-}
-
-.racingbulls .driver-number {
-    color: #ffffff;
-}
-
-.williams .driver-number {
-    color: #4aa3ff;
-}
-
-.audi .driver-number {
-    color: #c0c0c0;
-}
-
-.aston .driver-number {
-    color: #00d4b0;
-}
-
-.cadillac .driver-number {
-    color: #d4af37;
-}
+.mercedes .driver-number { color: #00d2be; }
+.ferrari .driver-number { color: #ff2800; }
+.redbull .driver-number { color: #4d73ff; }
+.mclaren .driver-number { color: #ff8700; }
+.alpine .driver-number { color: #ff69b4; }
+.haas .driver-number { color: #b6babd; }
+.racingbulls .driver-number { color: #ffffff; }
+.williams .driver-number { color: #4aa3ff; }
+.audi .driver-number { color: #c0c0c0; }
+.aston .driver-number { color: #00d4b0; }
+.cadillac .driver-number { color: #d4af37; }
 
 /* 검색 결과 드라이버 강조 */
 .match-driver {
@@ -435,34 +397,11 @@ p {
     flex-wrap: wrap;
 }
 
-/* 검색 결과 팀 카드 크기 통일 */
-.team-card:has(.match-driver) {
-    width: 520px;
-    max-width: 520px;
-}
-
-/* 검색 결과 안의 드라이버 목록 */
-.team-card:has(.match-driver) .driver-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-}
-
-/* 검색 결과 선수 카드 크기 통일 */
-.team-card:has(.match-driver) .team-driver {
-    width: 100%;
-    min-height: 345px;
-}
-
-/* 검색 결과 사진 박스 크기 통일 */
-.team-card:has(.match-driver) .driver-photo {
-    height: 220px;
-}
-
-/* 검색해서 한 명만 남은 경우에도 카드 폭 유지 */
-.team-card:has(.match-driver) .match-driver {
-    width: 100%;
-}
+.team-card:has(.match-driver) { width: 520px; max-width: 520px; }
+.team-card:has(.match-driver) .driver-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+.team-card:has(.match-driver) .team-driver { width: 100%; min-height: 345px; }
+.team-card:has(.match-driver) .driver-photo { height: 220px; }
+.team-card:has(.match-driver) .match-driver { width: 100%; }
 
 /* 더보기 버튼 */
 .more-teams {
@@ -488,182 +427,200 @@ p {
     transition: 0.3s;
 }
 
-.more-teams summary:hover {
-    background-color: white;
-    color: #e10600;
-}
-
-.more-teams summary::-webkit-details-marker {
-    display: none;
-}
-
-.close-text {
-    display: none;
-}
-
-.more-teams[open] .open-text {
-    display: none;
-}
-
-.more-teams[open] .close-text {
-    display: inline;
-}
+.more-teams summary:hover { background-color: white; color: #e10600; }
+.more-teams summary::-webkit-details-marker { display: none; }
+.close-text { display: none; }
+.more-teams[open] .open-text { display: none; }
+.more-teams[open] .close-text { display: inline; }
 
 /* Technology */
-.tech-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-}
-
-.tech-box {
-    background-color: #101010;
-    padding: 25px;
-
-    border: 1px solid #555;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.08);
-    transition: 0.3s;
-}
-
-.tech-box:hover {
-    background-color: #1d1d1d;
-    transform: scale(1.04);
-}
-
-.tech-box h3 {
-    color: #e10600;
-    margin-bottom: 10px;
-}
+.tech-container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.tech-box { background-color: #101010; padding: 25px; border: 1px solid #555; border-radius: 15px; box-shadow: 0 0 15px rgba(255, 255, 255, 0.08); transition: 0.3s; }
+.tech-box:hover { background-color: #1d1d1d; transform: scale(1.04); }
+.tech-box h3 { color: #e10600; margin-bottom: 10px; }
 
 /* Gallery */
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-}
-
-.gallery-card {
-    height: 180px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background: linear-gradient(135deg, #222, #555, #e10600);
-
-    border: 2px solid #333;
-    border-radius: 18px;
-    box-shadow: 0 0 18px rgba(225, 6, 0, 0.4);
-
-    font-size: 22px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.gallery-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(225, 6, 0, 0.8);
-}
+.gallery-container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.gallery-card { height: 180px; display: flex; justify-content: center; align-items: center; background: linear-gradient(135deg, #222, #555, #e10600); border: 2px solid #333; border-radius: 18px; box-shadow: 0 0 18px rgba(225, 6, 0, 0.4); font-size: 22px; font-weight: bold; transition: 0.3s; }
+.gallery-card:hover { transform: scale(1.05); box-shadow: 0 0 25px rgba(225, 6, 0, 0.8); }
 
 /* Footer */
-footer {
-    text-align: center;
-    padding: 30px;
-
-    background-color: #111;
-    border-top: 2px solid #e10600;
-    color: #ccc;
-}
+footer { text-align: center; padding: 30px; background-color: #111; border-top: 2px solid #e10600; color: #ccc; }
 
 /* 반응형 */
 @media screen and (max-width: 1100px) {
-    .team-container {
-        grid-template-columns: 1fr;
-    }
-
-    .driver-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .more-team-container {
-        grid-template-columns: 1fr;
-    }
-
-    .cadillac {
-        grid-column: auto;
-        width: 100%;
-    }
+    .team-container { grid-template-columns: 1fr; }
+    .driver-list { grid-template-columns: repeat(2, 1fr); }
+    .more-team-container { grid-template-columns: 1fr; }
+    .cadillac { grid-column: auto; width: 100%; }
 }
-
 @media screen and (max-width: 900px) {
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .nav-menu {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .info-box {
-        flex-direction: column;
-    }
-
-    .tech-container,
-    .gallery-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .hero-text h2 {
-        font-size: 48px;
-    }
+    .navbar { flex-direction: column; gap: 15px; }
+    .nav-menu { flex-direction: column; gap: 10px; text-align: center; }
+    .info-box { flex-direction: column; }
+    .tech-container, .gallery-container { grid-template-columns: repeat(2, 1fr); }
+    .hero-text h2 { font-size: 48px; }
 }
-
 @media screen and (max-width: 700px) {
-    .search-box {
-        flex-direction: column;
-    }
-
-    .search-box button {
-        width: 100%;
-    }
-
-    .driver-list {
-        grid-template-columns: 1fr;
-    }
-
-    .driver-photo {
-        height: 260px;
-    }
-
-    .team-card:has(.match-driver) {
-        width: 100%;
-        max-width: none;
-    }
-
-    .team-card:has(.match-driver) .driver-list {
-        grid-template-columns: 1fr;
-    }
+    .search-box { flex-direction: column; }
+    .search-box button { width: 100%; }
+    .driver-list { grid-template-columns: 1fr; }
+    .driver-photo { height: 260px; }
+    .team-card:has(.match-driver) { width: 100%; max-width: none; }
+    .team-card:has(.match-driver) .driver-list { grid-template-columns: 1fr; }
+}
+@media screen and (max-width: 600px) {
+    .tech-container, .gallery-container { grid-template-columns: 1fr; }
+    .hero { height: 420px; }
+    .hero-text h2 { font-size: 38px; }
+    .hero-text p { font-size: 20px; }
 }
 
-@media screen and (max-width: 600px) {
-    .tech-container,
-    .gallery-container {
-        grid-template-columns: 1fr;
-    }
+/* =========================================
+   드라이버 상세정보 모달(Modal) 팝업 CSS
+   ========================================= */
 
-    .hero {
-        height: 420px;
-    }
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; 
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
 
-    .hero-text h2 {
-        font-size: 38px;
-    }
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
 
-    .hero-text p {
-        font-size: 20px;
-    }
+.modal-content {
+    background: #111;
+    border: 2px solid #e10600;
+    border-radius: 18px;
+    box-shadow: 0 0 35px rgba(225, 6, 0, 0.6);
+    
+    width: 90%;
+    max-width: 480px;
+    padding: 35px 30px;
+    position: relative;
+    
+    transform: scale(0.7);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 32px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.modal-close:hover {
+    color: #e10600;
+}
+
+.modal-header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333;
+}
+
+.modal-header h3 {
+    font-size: 30px;
+    color: white;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-image-wrap {
+    width: 160px;
+    height: 160px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(225, 6, 0, 0.5);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 25px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+/* 💡 정중앙 기준으로 되돌려짐 (object-position 제거) */
+.modal-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-info {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.modal-info p {
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #222;
+    padding-bottom: 5px;
+}
+
+.modal-info strong {
+    display: inline-block;
+    width: 150px;
+    color: #e10600;
+}
+
+.modal-info span {
+    color: white;
+    font-weight: bold;
+}
+
+.modal-desc {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(225, 6, 0, 0.1);
+    border-radius: 12px;
+    border-left: 4px solid #e10600;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.modal-desc p {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 500px) {
+    .modal-content { padding: 25px 20px; }
+    .modal-image-wrap { width: 130px; height: 130px; }
+    .modal-info strong { width: 120px; }
 }
